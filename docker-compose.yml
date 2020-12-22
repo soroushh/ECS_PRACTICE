@@ -5,9 +5,9 @@ services:
     build: ./flaskapp-docker
 #    image: flaskapp:latest
     container_name: flaskapp
-    network_mode: bridge
-    ports:
-      - '8000:8000'
+#    network_mode: bridge
+#    ports:
+#      - '8000:8000'
 
   nginx:
     build: ./nginx
