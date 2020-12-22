@@ -11,6 +11,6 @@ services:
     build: ./nginx
     image: nginx:latest
     container_name: nginx
-    network_mode: brdige
+    network_mode: bridge
     ports:
       - '80:80'
