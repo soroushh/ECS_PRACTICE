@@ -16,4 +16,4 @@ def login():
 
 @app.route("/hello")
 def hello():
-    return 'hello dude.'
+    return 'hello mate.'
