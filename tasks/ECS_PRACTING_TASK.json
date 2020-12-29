@@ -22,7 +22,7 @@
     }
   ],
   "networkMode": "bridge",
-  "family": "application-stack",
+  "family": "ECS_PRACTING_TASK",
   "cpu": "256",
   "memory": "256"
 }
