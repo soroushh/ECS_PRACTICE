@@ -18,7 +18,7 @@
 
 - name: Create task definition
   service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file:///deploy/tasks/ECS_PRACTING_TASK.json
+  command: /bin/sh -c 'sed -i "s/%COMMIT%/$CI_COMMIT_ID/" deploy/tasks/ECS_PRACTING_TASK.json && aws ecs register-task-definition --cli-input-json file:///deploy/tasks/ECS_PRACTING_TASK.json
 
 - name: Update service
   service: awsdeployment
