@@ -1,0 +1,14 @@
+flaskapp:
+  build:
+    image: flask_app
+    dockerfile_path: ./flaskapp/Dockerfile
+
+nginx:
+  build: nginx
+  dockerfile_path: ./nginx/Dockerfile
+
+dockercfgGenerator:
+  image: codeship/aws-ecr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file:
+    - env.encrypted
