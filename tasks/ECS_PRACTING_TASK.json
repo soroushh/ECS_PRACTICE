@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx:PROD_6c72c7395ed129d1acff41795c26008afd9a43cf",
+      "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx:PROD_68b4d26647dc9a0777f09ccf6427260428c37c00",
       "essential": true,
       "portMappings": [
         {
@@ -17,7 +17,7 @@
     },
     {
       "name": "app",
-      "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp:PROD_6c72c7395ed129d1acff41795c26008afd9a43cf",
+      "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp:PROD_68b4d26647dc9a0777f09ccf6427260428c37c00",
       "essential": true
     }
   ],
