@@ -10,7 +10,7 @@
 - name: Push app image to ECR
   service: nginx
   type: push
-  image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx/nginx
+  image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx
   registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com
   dockercfg_service: dockercfgGenerator
   image_tag: "{% raw %}{{ .CommitID }}{% endraw %}"
