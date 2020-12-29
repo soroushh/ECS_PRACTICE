@@ -1,7 +1,7 @@
 flaskapp:
   build:
     image: flask_app
-    dockerfile_path: ./flaskapp/Dockerfile
+    dockerfile_path: ./flaskapp-docker/Dockerfile
 
 nginx:
   build: nginx
