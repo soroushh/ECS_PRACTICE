@@ -15,5 +15,5 @@ def login():
 
 
 @app.route("/hello")
-def login():
+def hello():
     return 'hello dude.'
