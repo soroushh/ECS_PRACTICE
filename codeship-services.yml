@@ -1,11 +1,11 @@
 flaskapp:
-  build:
-    image: flask_app
-    dockerfile_path: ./flaskapp-docker/Dockerfile
+  build: ./flaskapp-docker
+#    image: flask_app
+#    dockerfile_path: ./flaskapp-docker/Dockerfile
 
 nginx:
-  build: nginx
-  dockerfile_path: ./nginx/Dockerfile
+  build: ./nginx
+#  dockerfile_path: ./nginx/Dockerfile
 
 dockercfgGenerator:
   image: codeship/aws-ecr-dockercfg-generator
