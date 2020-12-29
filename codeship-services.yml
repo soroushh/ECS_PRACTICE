@@ -3,6 +3,8 @@ flaskapp:
 
 nginx:
   build: ./nginx
+  links:
+    - flaskapp
 
 dockercfgGenerator:
   image: codeship/aws-ecr-dockercfg-generator
