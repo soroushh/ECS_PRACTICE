@@ -17,6 +17,6 @@ awsdeployment:
   encrypted_env_file:
     - env.encrypted
   environment:
-    - AWS_DEFAULT_REGION=us-east-1
+    - AWS_DEFAULT_REGION=eu-west-1
   volumes:
     - ./:/deploy
