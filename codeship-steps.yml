@@ -13,5 +13,5 @@
   image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx/nginx
   registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp
   dockercfg_service: dockercfgGenerator
-  image_tag: "{{.CommitID}}"
+  image_tag: "{% raw %}{{ .CommitID }}{% endraw %}"
   tag: master
