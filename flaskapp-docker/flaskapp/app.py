@@ -20,4 +20,4 @@ def hello():
 
 @app.route('/test')
 def test():
-    return 'This is a testing endpoint. Hoy listen dude.'
+    return 'Deployment is complete now.'
