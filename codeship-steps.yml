@@ -2,7 +2,7 @@
   service: flaskapp
   type: push
   image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp
-  registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp
+  registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com
   dockercfg_service: dockercfgGenerator
   image_tag: "{% raw %}{{ .CommitID }}{% endraw %}"
   tag: master
@@ -11,7 +11,7 @@
   service: nginx
   type: push
   image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx/nginx
-  registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp
+  registry: https://947341666543.dkr.ecr.eu-west-1.amazonaws.com
   dockercfg_service: dockercfgGenerator
   image_tag: "{% raw %}{{ .CommitID }}{% endraw %}"
   tag: master
