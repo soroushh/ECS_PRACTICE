@@ -22,4 +22,4 @@
 
 - name: Update service
   service: awsdeployment
-  command: aws ecs update-service --cluster ECSPRACTICEEC2 --service ecs_practice_service --task-definition ECS_PRACTING_TASK
+  command: aws ecs update-service --cluster first --service new_service --task-definition ECS_PRACTING_TASK
