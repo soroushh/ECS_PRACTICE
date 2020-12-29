@@ -26,5 +26,6 @@
     }
   ],
   "networkMode": "bridge",
-  "family": "ECS_PRACTING_TASK"
+  "family": "ECS_PRACTING_TASK",
+  "RequiresCompatibilities": ["EC2"]
 }
