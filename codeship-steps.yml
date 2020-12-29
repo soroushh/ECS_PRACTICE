@@ -15,3 +15,11 @@
   dockercfg_service: dockercfgGenerator
   image_tag: "PROD_{{ .CommitID }}"
   tag: master
+
+- name: Create task definition
+  service: awsdeployment
+  command: aws ecs register-task-definition --cli-input-json file:///deploy/tasks/ECS_PRACTICING_TASK.json
+
+- name: Update service
+  service: awsdeployment
+  command: aws ecs update-service --service flask_app_service --task-definition ECS_PRACTICING_TASK
