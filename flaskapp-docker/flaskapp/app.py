@@ -17,3 +17,7 @@ def login():
 @app.route("/hello")
 def hello():
     return 'hello mate.'
+
+@app.route('/test')
+def test():
+    return 'This is a testing endpoint.'
