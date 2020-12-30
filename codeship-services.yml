@@ -1,6 +1,9 @@
 flaskapp:
   build: ./flaskapp-docker
 
+alembic:
+  build: .
+
 nginx:
   build: ./nginx
   links:
