@@ -18,6 +18,6 @@ def login():
 def hello():
     return 'hello mate.'
 
-@app.route('/test')
+@app.route('/add')
 def test():
-    return 'Deployment is complete now.'
+    return 'The added endpoint is added!'
