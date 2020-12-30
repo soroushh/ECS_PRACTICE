@@ -1,3 +1,7 @@
+- name: Upgrade migrations
+  service: alembic
+  command: alembic upgrade head
+
 - name: Push app image to ECR
   service: flaskapp
   type: push
