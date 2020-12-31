@@ -1,8 +1,8 @@
-from ConfigParser import SafeConfigParser
+from configparser import ConfigParser
 import os
 
 if __name__ == "__main__":
-    parser = SafeConfigParser()
+    parser = ConfigParser()
     parser.read('alembic.ini')
     parser.set(
         'alembic',
