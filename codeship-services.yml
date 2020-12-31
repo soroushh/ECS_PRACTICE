@@ -3,6 +3,8 @@ flaskapp:
 
 alembic:
   build: .
+  environment:
+    - DATABASE_URI=postgresql://postgres:Kati8212579!@my-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres
 
 nginx:
   build: ./nginx
