@@ -1,1 +1,3 @@
 *.DS_Store
+.idea/*
+alembic/versions/__pycache__*
