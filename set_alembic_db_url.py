@@ -7,7 +7,7 @@ if __name__ == "__main__":
     parser.set(
         'alembic',
         'sqlalchemy.url',
-        os.environ['DATABASE_URI']
+        os.environ['DATABASE']
     )
     with open('alembic.ini', 'w') as configfile:
         parser.write(configfile)
