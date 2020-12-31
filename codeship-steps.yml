@@ -1,10 +1,10 @@
 - name: Update alembic ini file
   service: alembic
-  command: python3 set_alembic_db_url.py
+  command: python3 set_alembic_db_url.py && alembic upgrade head
 
-- name: Upgrade migrations
-  service: alembic
-  command: alembic upgrade head
+#- name: Upgrade migrations
+#  service: alembic
+#  command: alembic upgrade head
 
 - name: Push app image to ECR
   service: flaskapp
