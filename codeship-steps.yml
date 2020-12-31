@@ -1,6 +1,8 @@
 - name: Update alembic ini file
   service: alembic
-  command: python3 set_alembic_db_url.py && alembic upgrade head
+  command: /bin/sh -c 'python3 set_alembic_db_url.py && alembic upgrade head'
+#  command: python3 set_alembic_db_url.py && alembic upgrade head
+
 
 #- name: Upgrade migrations
 #  service: alembic
