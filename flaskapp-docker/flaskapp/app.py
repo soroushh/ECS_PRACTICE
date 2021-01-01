@@ -21,3 +21,7 @@ def hello():
 @app.route('/add')
 def test():
     return 'Endpoint is changed now.'
+
+@app.route('/multiply/<int:first>/<int:second>')
+def multiply(first, second):
+    return f'The multiply of request parameters are {first*second}.'
