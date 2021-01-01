@@ -18,7 +18,8 @@
     {
       "name": "app",
       "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp:PROD_%COMMIT%",
-      "essential": true
+      "essential": true,
+      "command": ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"]
     }
   ],
   "networkMode": "bridge",
