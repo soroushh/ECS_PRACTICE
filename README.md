@@ -36,8 +36,8 @@ the `cluster's name` after `--cluster` and `--service` under the `command` key i
 
 6. For being able to run `migrations`, we provide the `alembic's` infrastructure 
 by looking at the [alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html) tutorial.
-In the `alembic.ini` file, we change the `sqlalchemy.url` to `%db%`.
-`sqlalchemy.url = %db%`
+In the `alembic.ini` file, we change the `sqlalchemy.url` to `%db%`.<br />
+`sqlalchemy.url = %db%`<br />
 In order to create new migration files, we run the `alembic revision -m "Create new table"`.
 Then, we put the scripts in the new created migration file in the `alembic/versions` directory.
 
