@@ -20,4 +20,4 @@ def hello():
 
 @app.route('/add')
 def test():
-    return 'The endpoint is updated for final end to end CI/CD testing.'
+    return 'Endpoint is changed now.'
