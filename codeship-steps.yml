@@ -1,5 +1,9 @@
-- name: Update alembic ini file
-  service: alembic
+#- name: Update alembic ini file
+#  service: alembic
+#  command: /bin/sh -c 'sed -i "s|%db%|$DATABASE|" alembic.ini && alembic upgrade head'
+
+- name: Runnig migrations
+  service: flaskapp
   command: /bin/sh -c 'sed -i "s|%db%|$DATABASE|" alembic.ini && alembic upgrade head'
 
 - name: Push app image to ECR
