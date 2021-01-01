@@ -1,13 +1,6 @@
 - name: Update alembic ini file
   service: alembic
   command: /bin/sh -c 'sed -i "s|%db%|$DATABASE|" alembic.ini && alembic upgrade head'
-#  command: /bin/sh -c 'python3 set_alembic_db_url.py && alembic upgrade head'
-#  command: python3 set_alembic_db_url.py && alembic upgrade head
-
-
-#- name: Upgrade migrations
-#  service: alembic
-#  command: alembic upgrade head
 
 - name: Push app image to ECR
   service: flaskapp
