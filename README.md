@@ -1,5 +1,5 @@
 ### What
-In this repository, a complete CI/CD pipeline for deploying a flask application<br />
+In this repository, a complete CI/CD pipeline for deploying a flask application
 to AWS ECS has been provided.
 
 ### Technologies
