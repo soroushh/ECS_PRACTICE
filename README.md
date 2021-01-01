@@ -3,9 +3,9 @@ In this repository, a complete CI/CD pipeline for deploying a flask application
 to AWS ECS has been provided.
 
 ### Technologies
-Flask: The framework for defining a web app.<br />
-Gunicorn: Used for presenting the app.<br />
-Nginx: Used as a reverse proxy.<br />
+**Flask**: The framework for defining a web app.<br />
+**Gunicorn**: Used for presenting the app.<br />
+**Nginx**: Used as a reverse proxy.<br />
 
 ### How to use the project
 1. Create an `env.encrypted` file using 
@@ -35,7 +35,7 @@ the `cluster's name` after `--cluster` and `--service` under the `command` key i
 `Update service` step in the `command` section in the `codeship-steps.yml` file.
 
 6. For being able to run `migrations`, we provide the `alembic's` infrastructure 
-by looking at the [alemib](https://alembic.sqlalchemy.org/en/latest/tutorial.html) tutorial.
+by looking at the [alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html) tutorial.
 In the `alembic.ini` file, we change the `sqlalchemy.url` to `%db%`.
 `sqlalchemy.url = %db%`
 In order to create new migration files, we run the `alembic revision -m "Create new table"`.
