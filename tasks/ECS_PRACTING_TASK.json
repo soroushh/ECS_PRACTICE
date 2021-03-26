@@ -25,7 +25,7 @@
               "value": "postgresql://postgres:Kati8212579!@my-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres"
           }
       ],
-      "command": ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"]
+      "command": ["gunicorn3", "-b", "0.0.0.0:8000", "flaskapp.app:app", "--workers=5"]
     }
   ],
   "networkMode": "bridge",
