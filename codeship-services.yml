@@ -1,5 +1,7 @@
 flaskapp:
   build: ./flaskapp-docker
+  encrypted_env_file:
+    - prod_db_url.encrypted
 
 alembic:
   build: .
