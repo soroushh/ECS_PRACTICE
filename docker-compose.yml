@@ -1,15 +1,16 @@
 version: '3'
 
 services:
-  flaskapp:
+  app:
     build: ./flaskapp-docker
-    container_name: flaskapp
+    container_name: app
+    command: ['gunicorn3', '-b', '0.0.0.0:8000', 'app:app', '--workers=5']
 
   nginx:
     build: ./nginx
     image: nginx:latest
     container_name: nginx
     ports:
-      - '80:80'
+      - '8000:80'
     links:
-      - flaskapp
+      - app

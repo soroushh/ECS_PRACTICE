@@ -12,5 +12,3 @@ RUN pip3 install -r requirements.txt
 WORKDIR /opt/
 
 EXPOSE 8000
-
-#CMD ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"]
