@@ -5,8 +5,8 @@ services:
     build: ./flaskapp-docker
     container_name: app
     environment:
-      - DATABASE=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
-    command: ['gunicorn3', '-b', '0.0.0.0:8000', 'app:app', '--workers=5']
+      - DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
+    command: ['gunicorn3', '-b', '0.0.0.0:8000', 'flaskapp.app:app', '--workers=5']
 
   nginx:
     build: ./nginx

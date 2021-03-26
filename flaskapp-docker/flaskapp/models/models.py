@@ -1,5 +1,5 @@
 """Define the models for the flask."""
-from db.database import db
+from flaskapp.db.database import db
 
 class User(db.Model):
     __tablename__ = 'users'

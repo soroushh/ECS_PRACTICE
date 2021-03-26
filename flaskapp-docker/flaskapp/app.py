@@ -1,8 +1,8 @@
 from flask import Flask, render_template, jsonify
 import os
 
-from db.database import db
-from models import User
+from flaskapp.db.database import db
+from flaskapp.models.models import User
 
 def init_app():
     """Initialises the application."""
