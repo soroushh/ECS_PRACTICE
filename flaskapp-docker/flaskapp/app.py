@@ -8,7 +8,7 @@ def init_app():
     """Initialises the application."""
     app = Flask(__name__, instance_relative_config=False)
     app.config['SECRET_KEY'] = 'APP_SECRET_KEY'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Kati8212579!@my-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
     db.init_app(app=app)
     return app
 

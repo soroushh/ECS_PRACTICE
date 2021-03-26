@@ -19,7 +19,13 @@
       "name": "app",
       "image": "947341666543.dkr.ecr.eu-west-1.amazonaws.com/flaskapp:PROD_%COMMIT%",
       "essential": true,
-      "command": ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"]
+      "command": ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"],
+      "environment": [
+          {
+              "name": "DATABASE_URL",
+              "value": "postgresql://postgres:Kati8212579!@my-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres"
+          }
+      ]
     }
   ],
   "networkMode": "bridge",
