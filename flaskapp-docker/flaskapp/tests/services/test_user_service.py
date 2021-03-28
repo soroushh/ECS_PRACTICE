@@ -47,5 +47,5 @@ def test_add_by_name_email_adds_new_user(service):
 
     assert len(users) == len(TEST_DATA[User]) + 1
 
-    assert users[len(TEST_DATA)].username == new_user_name
-    assert users[len(TEST_DATA)].email == new_user_email
+    assert users[len(TEST_DATA[User])].username == new_user_name
+    assert users[len(TEST_DATA[User])].email == new_user_email
