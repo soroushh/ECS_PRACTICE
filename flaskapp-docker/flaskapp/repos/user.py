@@ -1,9 +1,10 @@
 """The definition of the repository for querying user models."""
-from .base import BaseRepository
-
 from flaskapp.models.models import User
 
-    class UserRepository(BaseRepository):
+from .base import BaseRepository
+
+
+class UserRepository(BaseRepository):
     _model = User
 
     def by_name(self, name):
