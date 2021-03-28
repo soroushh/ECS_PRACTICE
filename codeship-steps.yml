@@ -2,6 +2,10 @@
   service: alembic
   command: /bin/sh -c 'sed -i "s|%db%|$DATABASE|" alembic.ini && alembic upgrade head'
 
+- name: Running the Tests
+  service: flaskapp
+  command: pytest
+
 - name: Push app image to ECR
   service: flaskapp
   type: push
@@ -11,7 +15,7 @@
   image_tag: "PROD_{{ .CommitID }}"
   tag: master
 
-- name: Push app image to ECR
+- name: Push Nginx image to ECR
   service: nginx
   type: push
   image_name: 947341666543.dkr.ecr.eu-west-1.amazonaws.com/nginx
