@@ -7,6 +7,4 @@ from .user import UserRepository
 
 def get_user_repository(db=None) -> UserRepository:
     """The factory to create a UserRepository."""
-    db = db or default_database.session
-
-    return UserRepository(db=db)
+    return UserRepository(db=(db or default_database.session))

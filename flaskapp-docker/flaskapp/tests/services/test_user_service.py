@@ -24,8 +24,7 @@ TEST_DATA = {
 @pytest.fixture()
 def service():
     """Fixture for the tests."""
-    db = create_in_memory_database(data=TEST_DATA)
-    return get_user_service(db=db)
+    return get_user_service(db=create_in_memory_database(data=TEST_DATA))
 
 
 def test_service_can_be_instantiated(service):

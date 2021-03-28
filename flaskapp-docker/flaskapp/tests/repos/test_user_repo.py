@@ -21,8 +21,7 @@ TEST_DATA = {
 @pytest.fixture()
 def repository():
     """Fixture for the tests."""
-    db = create_in_memory_database(data=TEST_DATA)
-    return get_user_repository(db=db)
+    return get_user_repository(db=create_in_memory_database(data=TEST_DATA))
 
 
 def test_repository_can_be_instantiated(repository):
